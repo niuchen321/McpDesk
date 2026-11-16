@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    McpDesk.Api —— 个人 MCP 服务台的后端项目。
+
+    说明：
+      1. 直接使用 Microsoft.NET.Sdk.Web，包含了 ASP.NET Core 的全部依赖，
+         因此不需要额外引用任何 NuGet 包，保证在完全离线的机器上也能还原与编译。
+      2. 目标框架为 .NET 8（LTS），与安装包中 02-DotNet 的 SDK 8.0.x 对应。
+      3. Nullable 打开，强制处理可空引用，减少空引用异常。
+      4. XML 文档注释参与编译检查（GenerateDocumentationFile），
+         保证每个公开成员都有中文注释可读。
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>McpDesk.Api</RootNamespace>
+    <AssemblyName>McpDesk.Api</AssemblyName>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- 注释齐全时不会有警告；缺失注释的公开成员会以 CS1591 提示，这里选择忽略以免噪音 -->
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+</Project>

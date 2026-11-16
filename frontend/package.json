@@ -1,0 +1,19 @@
+{
+  "name": "mcpdesk-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "McpDesk 个人 MCP 服务台 - Vue 3 管理界面",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7"
+  }
+}
